@@ -1,0 +1,8 @@
+h1. Curso Ext JS 4
+
+Repositório criado para acompanhar o curso online de Ext JS 4 ministrado pela Loiane Groner.
+
+h2. Links
+
+curso: http://www.loiane.com/2011/11/curso-de-extjs-4-gratuito/
+github: https://github.com/loiane/curso-extjs4
