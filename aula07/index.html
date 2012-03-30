@@ -1,0 +1,52 @@
+<html>
+<head>
+	
+	<link rel="stylesheet" type="text/css" href="../extjs/resources/css/ext-all.css">
+	<script type="text/javascript" src="../extjs/ext-all.js"></script>
+
+</head>
+
+<body></body>
+
+	<script type="text/javascript">
+
+	Ext.define('Aula07.mixins.Tocar', {
+		tocar : function() {
+			console.log('tocando instrumento...');
+		}
+	});
+
+	Ext.define('Aula07.mixins.Afinar', {
+		afinar : function() {
+			console.log('afinando instrumento...');
+		}
+	});
+
+	Ext.define('Aula07.instrumento.Violao', {
+		mixins	: {
+			tocar 	: 'Aula07.mixins.Tocar',
+			afinar 	: 'Aula07.mixins.Afinar'
+		}
+	});
+
+	Ext.define('Aula07.instrumento.Piano', {
+		mixins	: {
+			instrToc 	: 'Aula07.mixins.Tocar',
+			instrAfi 	: 'Aula07.mixins.Afinar'
+		}
+	});
+
+	Ext.onReady(function(){
+
+		var violao = Ext.create('Aula07.instrumento.Violao');
+		violao.afinar();
+		violao.tocar();
+
+		var piano = Ext.create('Aula07.instrumento.Piano');
+		piano.afinar();
+		piano.tocar();
+
+	});
+	</script>
+
+</html>
